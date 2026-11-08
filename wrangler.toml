@@ -4,9 +4,25 @@ main = "_worker.js"
 compatibility_date = "2025-11-04"
 keep_vars = true
 
-#[[kv_namespaces]]
-#binding = "KV"			#KV绑定名默认不可修改
-#id = ""				#KV数据库id
+[kv_namespaces]
+binding = "KV"			#KV绑定名默认不可修改
+id = "afc66fcaece74be2968442de98730fbd"				#KV数据库id
 
 preview_urls = false
 workers_dev = false
+
+# ...
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
+persist = true
+
+[observability.issue_detection]
+enabled = false
+# ...
